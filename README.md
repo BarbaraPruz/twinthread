@@ -1,24 +1,35 @@
-# README
+# TwinThread Code Challenge
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environment
+* Ruby version 2.6.1
+* Rails ~> 5.2.3
 
-Things you may want to cover:
+## Project Setup
+* Fork and clone this GIT repo.
+* bundle install
+* rake db:migrate
 
-* Ruby version
+## Running App Notes
+To run, rails s
 
-* System dependencies
+On startup, application will populate the database and so this may take some seconds.
+Navigation bar options:
+* Assets (this is also page displayed at startup) : shows index of assets with a search form.
+* Critical : lists assets with critical status
+* Classes : lists classes.  The View Assets link shows the assets for that class.
 
-* Configuration
+## Implementation Notes
 
-* Database creation
+### Assumptions
+* The id's in JSON (like property_id, class_id, asset_id) are unique.
+* For classes, the names are also unique.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Not Handled and Backlog to do!
+* In asset json, the following fields are not processed: Running, Utilization, Performance and Location. I could see these all point to a "Property" but I was wrestling with how to implement those relationships in the model.  (and then ran out of avaiable time!)
+* asset parent-children not really connected (model doesn't include relationship)
+* JSON dataType is not processed.   
+* I approached task with a "red, green, refactor" mindset.  So I think there are likely some performance optimizations that can be considered and some code tweaks for
+maintainability.  In other words, I didn't get to the refactor stage.
+* user interface : additional things to consider like case insensitive searching, linking information
+  (ex. from class list asset view, have link back to show the asset)
+* only minimal error handling right now

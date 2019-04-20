@@ -2,7 +2,7 @@ class TassetsController < ApplicationController
     def index
         @search_field = params[:search] ? params[:search] : "id"
         if params[:search]
-            puts "Searching for #{params["search"]} #{params["value"]}"
+            #puts "Searching for #{params["search"]} #{params["value"]}"
             if params["search"] == "status"
                 params["value"] = AssetStatus.get_code(params["value"])
             end

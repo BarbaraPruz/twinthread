@@ -6,7 +6,7 @@ class CreateTAssets < ActiveRecord::Migration[5.2]
       t.string  :description
       t.integer :status
       t.string  :icon
-      # To Do: following should be id's to property table
+      # To Do: following need to be references to the property table
       # t.integer :running  
       # t.integer :utilization
       # t.integer :performance 

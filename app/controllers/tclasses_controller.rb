@@ -7,7 +7,6 @@ class TclassesController < ApplicationController
     end
 
     def show
-        puts "Class show #{params}"
         @class = TClass.find_by(:id => params[:id])
     end
 end

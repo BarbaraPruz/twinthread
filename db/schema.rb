@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_225233) do
+ActiveRecord::Schema.define(version: 2019_04_20_233117) do
 
   create_table "asset_statuses", force: :cascade do |t|
     t.string "description"
     t.integer "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.integer "property_id"
+    t.string "value"
+    t.string "units"
+    t.integer "datatype"
+    t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
