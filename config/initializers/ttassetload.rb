@@ -1,3 +1,4 @@
+
 puts "*** Clearing Database ***"
 TAsset.delete_all
 TClass.delete_all
@@ -5,8 +6,10 @@ TClass.delete_all
 puts "*** Loading Assets *** #{Rails.root}"
 # Note: File.read reading complete file into memory so no good for extremely large datasets
 data_hash = JSON.parse(File.read(File.join(Rails.root, 'app','json','tttestdata.txt')))
-# To Do: maybe create tables for the asset status strings and data types
-puts "asset_status #{data_hash['asset_status']}"
+
+AssetStatus.load_from_json(data_hash['asset_status'])
+puts "Loaded status values #{AssetStatus.all.count}"
+
 puts "data_types #{data_hash['dataType']}"
 
 assets = data_hash['assets']

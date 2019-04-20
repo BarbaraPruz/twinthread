@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'tassets#index'
   
   get '/tassets' => 'tassets#index'
+  get '/tassets/critical' => 'tassets#critical', :as => :critical_tassets
 
 end

@@ -1,14 +1,5 @@
 <div class="page-container">
-    <h1>Assets Index</h1>
-    <div id="search_form">
-        <%= form_tag tassets_path, method: :get do %>
-            <input type="hidden" name="search" value="true">
-            <%= search_select_tag(@search_field) %>
-            <label>value:</label>
-            <input type="text" name="value" placeholder="search value">
-            <button>search</button>
-        <% end %>       
-    </div>
+    <h1>Critical Assets</h1>
     <div>
         <table id="assets">
             <thead>
