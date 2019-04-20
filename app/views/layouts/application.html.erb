@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ttwork</title>
+    <title>TwinThread</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,6 +15,7 @@
       <ul class="nav-links">
         <li class="nav-item"><a href=<%= tassets_path %>>Assets</a></li>
         <li class="nav-item"><a href=<%= critical_tassets_path %>>Critical</a></li>
+        <li class="nav-item"><a href=<%= tclasses_path %>>Classes</a></li>
       </ul>
     </nav>
 
@@ -22,4 +23,4 @@
       <%= yield %>
     </div>
   </body>
-
+</html>

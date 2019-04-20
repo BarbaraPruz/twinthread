@@ -1,0 +1,12 @@
+// Place all the styles related to the tclasses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#class_asset_list {
+    width:25%;
+    margin: auto;
+    margin-top: 1.5em;
+}
+
+#class_asset_list ol {
+    text-align: left;
+}

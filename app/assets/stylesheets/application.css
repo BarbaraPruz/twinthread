@@ -13,10 +13,13 @@
  *= require_tree .
  *= require_self
  */
- /* Navigation */
 /* Navigation */
 html {
   box-sizing: border-box;
+}
+
+body {
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 *, *::before, *::after {
@@ -45,6 +48,7 @@ nav {
 }
 .logo {
   display: inline-block;
+  color:#002db3;
 }
 
 .nav-links {
@@ -60,3 +64,34 @@ nav {
 
 .nav-item:hover {
   background-color: blue;
+}
+
+.nav-item:hover a {
+  color: white;
+}
+
+/* Tables */
+table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color:#002db3;
+  color: white;
+}
+

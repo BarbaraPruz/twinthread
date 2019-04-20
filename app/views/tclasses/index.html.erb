@@ -1,0 +1,29 @@
+<div class="page-container">
+    <h1>Classes</h1>
+    <p>Number of Classes: <%= @class_count %></p>
+    <p>Number of Unique Class Names: <%= @class_name_count %></p>
+    <div>
+        <table id="classes">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Drill</th>
+                    <th scope="col">Assets</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @classes.each do | c| %>
+                    <tr>
+                        <td><%= c.class_id %></td>
+                        <td><%= c.name %></td>
+                        <td><%= c.drill %></td>
+                        <td><%= link_to "View", tclasses_assets_path(c.id) %></td>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
+ 

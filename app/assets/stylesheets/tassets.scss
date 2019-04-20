@@ -9,27 +9,3 @@
     text-align: center;
     margin: 0.5em auto 0.5em auto;
 }
-/* the assets table */
-#assets {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin: auto;
-}
-  
-#assets td, #properties th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-  
-#assets tr:nth-child(even){background-color: #f2f2f2;}
-  
-#assets tr:hover {background-color: #ddd;}
-  
-#assets th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color:#002db3;
-    color: white;
-}

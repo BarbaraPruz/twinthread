@@ -1,0 +1,16 @@
+<div class="page-container">
+    <h1>Class: <%=@class.name %></h1>
+    <p>
+        Id: <%= @class.class_id %><br/>
+        Name: <%= @class.name %><br/>
+        Drill: <%= @class.drill %>
+    </p>
+    <div id="class_asset_list">
+        <h2>Assets (count=<%=@class.t_assets.count%>)</h2>
+        <ol>
+            <% @class.t_assets.each do | a | %>
+                <li><%= a.name %></li>
+            <% end %>
+        </ol>
+    </div>
+</div> 
