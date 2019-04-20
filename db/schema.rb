@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_222352) do
+ActiveRecord::Schema.define(version: 2019_04_20_223506) do
 
   create_table "t_assets", force: :cascade do |t|
     t.integer "asset_id"
@@ -18,9 +18,14 @@ ActiveRecord::Schema.define(version: 2019_04_20_222352) do
     t.string "description"
     t.integer "status"
     t.string "icon"
-    t.integer "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "parent_asset_id"
+  end
+
+  create_table "t_assets_classes", id: false, force: :cascade do |t|
+    t.integer "t_asset_id", null: false
+    t.integer "t_class_id", null: false
+    t.index ["t_asset_id", "t_class_id"], name: "index_t_assets_classes_on_t_asset_id_and_t_class_id"
+    t.index ["t_class_id", "t_asset_id"], name: "index_t_assets_classes_on_t_class_id_and_t_asset_id"
   end
 
   create_table "t_classes", force: :cascade do |t|

@@ -1,0 +1,169 @@
+{
+    "asset_status": {
+        "Normal": 1,
+        "Warning": 2,
+        "Critical": 3
+    },
+    "dataType": {
+        "Float": 1,
+        "Integer": 2,
+        "String": 3,
+        "State": 4,
+        "Location": 5
+    },
+    "assets": [{
+        "assetId": 10324,
+        "name": "newtwin test / Add asset luis test",
+        "description": "luis fix asset add test",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": {
+            "propertyId": 411343,
+            "value": "",
+            "units": "",
+            "dataType": 5,
+            "status": 1
+        },
+        "classList": [{
+            "id": 4,
+            "name": "Availability",
+            "drill": "/Assets/Detail/10006"
+        }],
+        "parentId": 10296
+    }, {
+        "assetId": 10326,
+        "name": "newtwin test / addAssetLuisTest",
+        "description": "test adding asset",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [{
+            "id": 7,
+            "name": "Cat",
+            "drill": "/Assets/Detail/10011"
+        }],
+        "parentId": 10296
+    }, {
+        "assetId": 10241,
+        "name": "AirConditioner2Brian / AirConditioner1Brian",
+        "description": "AirConditioner1Brian",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [{
+            "id": 34,
+            "name": "10th class",
+            "drill": "/Assets/Detail/13046"
+        }],
+        "parentId": 10242
+    }, {
+        "assetId": 10242,
+        "name": "AirConditioner2Brian / AirConditioner2Brian",
+        "description": "AirConditioner2Brian",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [],
+        "parentId": 10242
+    }, {
+        "assetId": 10244,
+        "name": "Asset 1 4 1018 / AirConditionerOlivia",
+        "description": "AirConditionerOlivia",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [],
+        "parentId": 100
+    }, {
+        "assetId": 13251,
+        "name": "ANDREWLINE1 / ANDREW001",
+        "description": "ANDREW001",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [],
+        "parentId": 13253
+    }, {
+        "assetId": 13252,
+        "name": "ANDREWLINE1 / ANDREW002",
+        "description": "ANDREW002",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [],
+        "parentId": 13253
+    }, {
+        "assetId": 13253,
+        "name": "ANDREWLINE1",
+        "description": "ANDREWLINE1",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": null,
+        "classList": [],
+        "parentId": null
+    }, {
+        "assetId": 10310,
+        "name": "Fountain 121 / Andrew's asset",
+        "description": "drew test message",
+        "status": 1,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": {
+            "propertyId": 411130,
+            "value": "POINT (-77.890589572986826 37.255064687122825)",
+            "units": "",
+            "dataType": 5,
+            "status": 1
+        },
+        "classList": [],
+        "parentId": 10134
+    }, {
+        "assetId": 10230,
+        "name": "Arlington Traditional",
+        "description": "Arlington Traditional Elementary School",
+        "status": 3,
+        "icon": "asset",
+        "Running": null,
+        "Utilization": null,
+        "Performance": null,
+        "Location": {
+            "propertyId": 411487,
+            "value": "",
+            "units": "",
+            "dataType": 5,
+            "status": 1
+        },
+        "classList": [{
+            "id": 2,
+            "name": "Location",
+            "drill": "/Assets/Detail/10004"
+        }],
+        "parentId": null
+    }]
+}

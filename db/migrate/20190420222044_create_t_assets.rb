@@ -13,8 +13,7 @@ class CreateTAssets < ActiveRecord::Migration[5.2]
       # t.integer :location
       # classList is has many TClasses
       # Parent / Child relation : to do: add has_many/belongs to
-      t.integer :parent_id 
-      t.timestamps
+      t.integer :parent_asset_id 
     end
   end
 end

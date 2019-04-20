@@ -1,1 +1,34 @@
 <h1>Assets Index</h1>
+<div class="page-container">
+    <div>
+        <table id="assets">
+            <thead>
+                <tr>
+                    <th scope="col">Asset Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Icon</th>
+                    <th scope="col">Parent</th>
+                    <th scope="col">Classes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @assets.each do | asset| %>
+                    <tr>
+                        <td><%= asset.asset_id %></td>
+                        <td><%= asset.name%></td>
+                        <td><%= asset.description %></td>
+                        <td><%= asset.status %></td>       
+                        <td><%= asset.icon %></td>
+                        <td><%= asset.parent_asset_id %></td>
+                        <td><% asset.t_classes.each do |c| %>
+                            <%= c.name %>
+                            <% end %>
+                        </td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+  </div>

@@ -1,5 +1,5 @@
 class TassetsController < ApplicationController
     def index
-        puts "assets index"
+        @assets = TAsset.all
     end
 end
