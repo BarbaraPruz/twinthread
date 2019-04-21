@@ -1,5 +1,8 @@
+# Verify rake db:create has been executed
+return if ActiveRecord::Base.connection.data_sources.length==0
+
 url = 'https://www.twinthread.com/code-challenge/assets.txt'
- 
+
 puts "*** Clearing Database ***"
 TAsset.delete_all
 TClass.delete_all

@@ -13,6 +13,7 @@
 To run, rails s
 
 On startup, application will populate the database and so this may take some seconds.
+Application will be available at localhost:3000
 Navigation bar options:
 * Assets (this is also page displayed at startup) : shows index of assets with a search form.
 * Critical : lists assets with critical status
@@ -33,3 +34,7 @@ maintainability.  In other words, I didn't get to the refactor stage.
 * user interface : additional things to consider like case insensitive searching, linking information
   (ex. from class list asset view, have link back to show the asset)
 * only minimal error handling right now
+
+### Database Seeding
+At server start time, Rails will run custom initializer config/initializers/ttassetload.rb.  The initializer verifies that the database exists (tables/schema defined). If so, it empties any current
+data and then gets the JSON file and processes.
