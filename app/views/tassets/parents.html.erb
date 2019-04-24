@@ -1,0 +1,15 @@
+<div>
+    <h1>Assets by Parent Listing</h1>
+    <ul>
+        <% @parents.each do |parent| %>
+            <li>
+                <%= parent.asset_id %> - <%= parent.name %>
+                <p>
+                <% parent.children.each do |child| %>
+                    child: <%= child.asset_id %>-<%= child.name %>, 
+                <% end %>
+                </p>
+            </li>
+        <% end %>
+    </ul>
+</div>

@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get '/tassets' => 'tassets#index'
   get '/tassets/critical' => 'tassets#critical', :as => :critical_tassets
-
+  get '/tassets/parents' => 'tassets#parents', :as => :parent_tassets
+  
   get '/tclasses' => 'tclasses#index'
   get '/tclasses/:id' => 'tclasses#show', :as => :tclasses_assets
 

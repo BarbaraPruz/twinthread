@@ -16,4 +16,12 @@ class TassetsController < ApplicationController
         @assets = TAsset.where( status: '3' ).all
     end
 
+    def parents
+        # to get children: <tasset>.children
+        # To Do: move to a different controller? Model?
+        @parents = []
+        ParentalRelation.select('DISTINCT t_asset_id').each do |p| 
+          @parents << TAsset.find_by(:id => p.t_asset_id)
+        end
+    end
 end

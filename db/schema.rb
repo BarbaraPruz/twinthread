@@ -10,11 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_233117) do
+ActiveRecord::Schema.define(version: 2019_04_24_210640) do
 
   create_table "asset_statuses", force: :cascade do |t|
     t.string "description"
     t.integer "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "parental_relations", force: :cascade do |t|
+    t.integer "t_asset_id"
+    t.integer "child_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -3,6 +3,10 @@ class TAsset < ApplicationRecord
 
     has_and_belongs_to_many :t_classes
 
+    has_many :parental_relations
+    has_many :parent, :class_name => "TAsset"
+    has_many :children, :through => :parental_relations, :class_name => "TAsset"
+
     def self.create_from_json asset_hash
         asset = TAsset.create( 
             :asset_id => asset_hash['assetId'], 
@@ -19,8 +23,10 @@ class TAsset < ApplicationRecord
             end
             asset.t_classes << asset_class
         }
+
+        # To Do: not handling property references - :running, :utilization, :performance, :location
         asset.save
         asset
     end
-    
 end
+
